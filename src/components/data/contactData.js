@@ -1,0 +1,33 @@
+const Contact = [
+    {
+        id: 0,
+        name: "codepen",
+        url: "https://codepen.io/athulsprakash"
+    },
+    {
+        id: 1,
+        name: "github",
+        url: "https://github.com/AthulSPrakash"
+    },
+    {
+        id: 2,
+        name: "twitter",
+        url: "https://twitter.com/AthulSPrakash"
+    },
+    {
+        id: 3,
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/athul-s-prakash-071975209"
+    },
+    {
+        id: 4,
+        name: "instagram",
+        url: "https://www.instagram.com/athulsprakash_"
+    },
+    {
+        id: 5,
+        name: "medium",
+        url: "https://medium.com/@athulsprakash"
+    }
+]
+export default Contact

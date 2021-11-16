@@ -1,0 +1,436 @@
+@import url('./color.css');
+.work{
+    height: 100vh;
+    position: relative;
+    padding: 5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+.work h2{
+    text-align: center;
+    color: var(--text-alt);
+    letter-spacing: 0.1rem;
+    margin-top: 2em;
+}
+.work h2:nth-of-type(1)::first-letter{color: var(--secondary);}
+.slide{
+    padding: 0.75rem 0 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-container{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+.swiper-slide, .swiper-slide img{
+    width: 80%;
+    height: auto;
+    border-radius: 3px;
+}
+.swiper-slide img{
+    transition: 400ms linear;
+}
+.swiper-slide-active img{
+    transform: scale(1.2);
+    transition: 400ms ease-in-out;
+}
+.overlay-container{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+}
+.visible{
+    visibility: visible;
+}
+.overly-wrapper{
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+.overlay{
+    position: relative;
+    width: 75vw;
+    min-width: 178px;
+    max-width: 676px;
+    height: 77.5vh;
+    max-height: 494px;
+    background: var(--text-alt);
+    border-radius: 3px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 30px 3px var(--footer);
+    overflow: hidden;
+}
+
+.ovrly-cls-asst{
+    width: fit-content;
+    height: 100%;
+    flex-grow: 1;
+}
+.ovrly-cls-asst2{
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+}
+.close-overlay{
+    position: absolute;
+    top: 28px;
+    right: 31px;
+    font-size: 1.5em;
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--footer);
+    z-index: 2;
+}
+.overlay-body{
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    display: flex;
+}
+.app-img-container{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+}
+.app-img-container img{
+    position: absolute;
+    height: 100%;
+    border: 7px solid var(--black);
+    border-radius: 1em;
+    z-index: 2;
+}
+.app-details{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    flex-grow: 1;
+    display: grid;
+    grid-template-areas: 
+        'x x x'
+        'a a a'
+        'b b b'
+        'e e e';
+    padding: 2em;
+    background: var(--text-alt);
+    top: 0;
+    right: 0;
+}
+.app-details li{
+    padding: 5px 0;
+    font-weight: 600;
+}
+.app-name{
+    grid-area: x;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.app-name p{
+    margin: 0.5em 0 0.25em 0;
+    font-size: 2em;
+    font-weight: 600;
+}
+.app-summary{
+    grid-area: a;
+}
+.app-feat-wrapper{
+    grid-area: b;
+    display: flex;
+    gap: 2em;
+    color: var(--text-ter);
+    margin-left: 1em;
+}
+.app-feat1, .app-feat2{
+    display: flex;
+    flex-direction: column;
+}
+.app-icon{
+    position: relative;
+    grid-area: e;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.app-icon button{
+    height: 100%;
+    border: none;
+    background: none;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.app-icon img{
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+    outline: 3px solid var(--text);
+}
+#overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+.carousel-root{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.carousel, .slider-wrapper{
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+@media screen and (max-width:880px) {
+    .overlay{
+        height: 75vh;
+    }
+    .app-details{
+        width: 55%;
+    }
+    .app-name p{
+        font-size: 1.9em;
+    }
+    .app-icon img{
+        width: 55px;
+        height: 55px;
+    }
+}
+@media screen and (max-width:750px) {
+    .overlay{
+        height: 70vh;
+    }
+    .app-details{
+        width: 52%;
+    }
+    .app-name p{
+        font-size: 1.7em;
+    }
+    .app-icon img{
+        width: 50px;
+        height: 50px;
+    }
+    .app-details li{
+        font-size: 0.85em;
+    }
+}
+@media screen and (max-width:685px) {
+    .overlay{
+        height: 60vh;
+    }
+    .app-name p{
+        font-size: 1.5em;
+    }
+    .app-summary{
+        font-size: 0.85em;
+    }
+    .app-icon img{
+        width: 45px;
+        height: 45px;
+    }
+    .app-details li{
+        font-size: 0.75em;
+    }
+}
+@media screen and (max-width:650px) {
+    .app-details li{
+        font-size: 0.65em;
+    }
+    .app-summary{
+        font-size: 0.70em;
+    }
+    .app-icon img{
+        width: 40px;
+        height: 40px;
+    }
+    .app-feat-wrapper{
+        gap: 1em;
+    }
+}
+@media screen and (max-width:550px) {
+    .overlay{
+        height: 55vh;
+    }
+   .app-name p{
+       font-size: 1.3em;
+   }
+    .app-details li{
+        font-size: 0.5em;
+    }
+    .close-overlay{
+        font-size: 1.35em;
+    }
+    .app-icon button{
+        font-size: 1.5em;
+    }
+    .app-icon img{
+        width: 37px;
+        height: 37px;
+    }
+}
+@media screen and (max-width:530px) {
+    .overlay{
+        width: 70vw;
+        height: 70vh;
+    }
+    .close-overlay{
+        top: 6px;
+        right: 10px;
+    }
+    .app-details{
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        top: unset;
+        box-shadow: 0 5px 20px 1px var(--text-ter);
+    }
+    .overlay-body{
+        justify-content: center;
+    }
+    .app-img-container{
+        position: absolute;
+        top: unset;
+        justify-content: center;
+
+    }
+    .app-img-container img{
+        z-index: unset;
+        height: 80%;
+    }
+    .app-icon img{
+        display: none;
+    }
+    .app-icon button{
+        position: absolute;
+        right: 0;
+    }
+    .app-name{
+        margin-bottom: 1em;
+    }
+    .app-summary{
+        font-size: 0.8em;
+    }
+    .app-feat-wrapper{
+        display: none;
+    }
+}
+@media screen and (max-width:385px) {
+    .overlay{
+        width: 67vw;
+        height: 65vh;
+    }
+    .app-img-container img {
+        height: 70%;
+    }
+    .app-summary{
+        font-size: 0.75em;
+    }
+    .app-icon img{
+        width: 45px;
+        height: 45px;
+    }
+    .app-name{
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width:345px) {
+    .overlay{
+        width: 70vw;
+        height: 60vh;
+    }
+    .app-name{
+        font-size: 0.7em;
+    }
+    .app-summary{
+        font-size: 0.5em;
+    }
+}
+@media screen and (min-width:600px) {
+    .work h2{
+        font-size: 1.8em;
+    }
+    .swiper-slide{
+        width: 230px;
+        height: 268.33px;
+    }
+    .swiper-slide img{
+        width: 230px;
+        height: 268.33px;
+    }
+    .info p{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width:750px) {
+    .swiper-container{
+        height: 450px;
+    }
+    .work h2{
+        font-size: 2em;
+    }
+    .swiper-slide{
+        width: 250px;
+        height: 291.67px;
+    }
+    .swiper-slide img{
+        width: 250px;
+        height: 291.67px;
+    }
+    .info p{
+        font-size: 20px;
+    }
+    .swiper-slide-active img{
+        transform: scale(1);
+    }
+    .swiper-slide-active .info{
+        transform: translateY(55px);
+    }
+}
+@media screen and (min-width:1000px) {
+    .work{
+        height: 110vh;
+    }
+    .swiper-slide:hover{
+        box-shadow: 0 0 20px 5px var(--secondary);
+        outline: 2px solid var(--secondary);
+      } 
+}
+@media screen and  (min-width:1200px) {
+    .swiper-container{
+        height: 500px;
+    }
+    .swiper-slide{
+        width: 300px;
+        height: 350px;
+    }
+    .swiper-slide img{
+        width: 300px;
+        height: 350px;
+    }
+    .info p{
+        font-size: 22px;
+    }
+}
