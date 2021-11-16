@@ -20,7 +20,7 @@ html{scroll-behavior: smooth;}
 h1,h2,h3,h4,p,a,li{
   font-family: 'Roboto', sans-serif;
 }
-h1{
+.main-text{
     color: var(--text-alt);
     padding: 2.5rem;
 }
@@ -62,6 +62,7 @@ button{
   text-align: center;
   text-decoration: none;
   color: var(--text-alt);
+  cursor: pointer;
 }
 .switch-page:hover, .switch-page:focus{
   transition: 100ms linear;
@@ -69,7 +70,7 @@ button{
 }
 
 /*------------Main-------------*/
-main{
+.main{
   position: relative;
   width: 100%;
   height: 100vh;
@@ -77,7 +78,7 @@ main{
   align-items: center;
   overflow: hidden;
 }
-main img{
+.wall{
   top: 0;
   left: 0;
   position: absolute;
@@ -98,110 +99,7 @@ main img{
 
 /* graphics */
 .graphic{
-  height: 100vh;
-}
-
-/*------------Footer------------*/
-footer{
-  height: 100vh;
-  background-color: var(--footer);
-  display: grid;
-}
-.mail{
-  width: 100%;
-  background-size: cover;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 1.5em 0;
-}    
-.mail a{
-  position: absolute;
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.75em;
-  text-decoration: none;
-  color: var(--text-alt);
-  z-index: 2;
-  text-align: center;
-  transition: 100ms linear;
-}
-.mail a:hover,.mail a:focus{
-  transform: scale(1.1);
-  transition: 100ms linear;
-}
-.icons{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contact{
-  width: 100%;
-  list-style-type: none;
-  padding: 1em;
-  display: grid;
-  justify-content: center;
-  align-items: end;
-  grid-template-columns: repeat(3,auto);
-}
-.license{
-  align-self: end;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-  padding: 1em 0;
-  border-top: 2px solid var(--license-border);
-}
-.license p{
-  font-size: 8px;
-  color: var(--text-alt);
-}
-.license a{
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--text-alt);
-  margin-left: 0.5em;
-}
-.license img{
-  height: 12px;
-  margin-left: 0.5em;
-  vertical-align: text-bottom;
-}
-.contact a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.fab{
-  width: 2em;
-  height: 2em;
-  text-decoration: none;
-  display: inline-block;
-  background: rgba(0,0,0,0);
-  color: var(--text-alt);
-  transition: 50ms linear;
-  font-size: 1.8em;
-}
-.hover-circle:hover{
-  background: linear-gradient(180deg, transparent 0%, transparent 75%, var(--scrollbar) 100%, var(--scrollbar) 100%);
-  background-size: 400% 400%;
-  animation: hovereffect 300ms linear forwards;
-  -webkit-animation: hovereffect 300ms linear forwards;
-}
-@keyframes hovereffect{
-  0% {
-  background-position: 0% 50%;
-}
-100% {
-  background-position: 50% 100%;
-}
-}
-.fab:hover{
-  transition: 50ms linear;
-  color: var(--secondary);
+  height: 100%;
 }
 
 /*----------Responsive-------------*/
@@ -212,7 +110,7 @@ footer{
   .switch-page{
       font-size: 2rem;
   }
-  h1{
+  .main-text{
     font-size: 32px;
   }
   .summary span:hover{
@@ -223,66 +121,29 @@ footer{
   .summary span:active{
       pointer-events: none;
   }
-  .mail a{
-      font-size: 3.25em;
-  }
-  .contact{
-      padding: 1em;
-  }
-  .license{
-      padding: 1.25em 0;
-  }
-  .license p{
-      font-size: 10px;
-  }
-  .license img{
-      height: 14px;
-  }
 }
 @media screen and (min-width:700px) {
-  h1{
+  .main-text{
       font-size: 34px;
   }
 }
 @media screen and (min-width:800px) {
-  h1{
+  .main-text{
       font-size: 38px;
   }
 }
 @media screen and (min-width:900px) {
-  h1{
+  .main-text{
       font-size: 40px;
   }
 }
 @media screen and (min-width:1000px) {
-  h1{
+  .main-text{
     font-size: 42px;
-  }
-  .mail{
-      margin: 2em 0;
-  }
-  .mail a{
-      font-size: 3.75em;
-  }
-  .contact{
-      padding: 1.5em;
-      gap: 1.25em;
-  }
-  .license{
-      padding: 1.5em 0;
-  }
-  .license p{
-      font-size: 12px;
-  }
-  .license img{
-      height: 16px;
-  }
-  .fab{
-      font-size: 2.25em;
   }
 }
 @media screen and (min-width:1200px) {
-  h1{
+  .main-text{
       font-size: 45px;
   }
 }

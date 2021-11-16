@@ -1,4 +1,5 @@
 import Contact from './data/contactData'
+import '../styles/footer.css'
 
 export default function Footer(){
     const links = Contact.map(link=>{

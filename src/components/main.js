@@ -17,10 +17,10 @@ export default function Main(){
     })
 
     return(
-        <main>
-            <img src={Images.path} alt="background" />
+        <main className="main">
+            <img className="wall" src={Images.path} alt="background" />
             <div className="summary">
-                <h1 id="hover-text" aria-label="summary">
+                <h1 className="main-text" id="hover-text" aria-label="summary">
                 </h1>
             </div>
         </main>

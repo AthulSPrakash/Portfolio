@@ -1,5 +1,5 @@
 import ProjectData from './data/projectData'
-import { useEffect } from 'react'
+import { useState,useEffect } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel'
 import '../styles/project.css'
@@ -42,7 +42,7 @@ export default function Project(){
                                         </div>
                                     </div>
                                     <div className="app-icon">
-                                        <img src={overlay.icon} alt="App icon image" />
+                                        <img src={overlay.icon} alt="App icon" />
                                         <button onClick={()=>gotoApp(index)} title="Go to app">
                                             <i className="fas fa-arrow-right"></i>
                                         </button>
@@ -69,7 +69,6 @@ export default function Project(){
 
     function openOverlay(i){
         document.querySelector(`#overlay-container-${i}`).classList.add('visible')
-        console.log(i)
     }
     function closeOverlay(i){
         document.querySelector(`#overlay-container-${i}`).classList.remove('visible')
@@ -78,11 +77,40 @@ export default function Project(){
         window.open(`${ProjectData[i].url}`,"_blank")
     }
 
+    const [width, setWidth] = useState(0)
+    useEffect(()=>windowSize())
+    window.onresize = windowSize
+    function windowSize(){
+        const width = window.innerWidth
+        setWidth(width)
+    }
+
+    const fader = document.querySelector(".text")
+    const appearOptions = {
+        threshold : 0,
+        rootMargin : "0px 0px -48% 0px"
+    }
+    const appearOnScroll = new IntersectionObserver(function(
+        entries,
+        appearOnScroll
+        ){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) return
+            else{
+                entry.target.classList.add("appear")
+                appearOnScroll.unobserve(entry.target)
+            }
+        })
+    },
+    appearOptions)
+    if(fader) appearOnScroll.observe(fader)
+
     return(
         <section className="work">
-            <h2>Projects</h2>
+            <h2 className="sec-one-title">Projects</h2>
             <div className="slide" aria-label="projects slides">
                 <div className="swiper-container">
+                    { width <= 530 ? 
                     <Carousel
                         showThumbs={false}
                         showStatus={false}
@@ -90,8 +118,16 @@ export default function Project(){
                         emulateTouch={true}
                     >
                         {projects}
-                    </Carousel>
+                    </Carousel> 
+                    : 
+                    <>{projects}</> }
                 </div>
+            </div>
+            <div className="quote">
+                <p className="text">A good design 
+                    should be elegant both inside & 
+                    outside while being accessible to all.
+                </p>
             </div>
             <div id="overlay">
                 {overlays}
