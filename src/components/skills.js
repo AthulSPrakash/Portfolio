@@ -1,4 +1,4 @@
-import Summary from "./data/summaryData"
+import Summary from "./data/summaryData.json"
 import { useEffect } from 'react'
 import '../styles/skill.css'
 

@@ -1,4 +1,4 @@
-import Contact from './data/contactData'
+import Contact from './data/contactData.json'
 import '../styles/footer.css'
 
 export default function Footer(){

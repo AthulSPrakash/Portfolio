@@ -1,6 +1,8 @@
-import Summary from './data/summaryData'
-import Images from './data/imageData'
+import Summary from './data/summaryData.json'
+import Images from './data/imageData.json'
 import { useEffect } from 'react'
+import Firefly from './firefly'
+import '../styles/main.css'
 
 export default function Main(){
     let a = ''
@@ -23,6 +25,7 @@ export default function Main(){
                 <h1 className="main-text" id="hover-text" aria-label="summary">
                 </h1>
             </div>
+            <Firefly/>
         </main>
     )
 }

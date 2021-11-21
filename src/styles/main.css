@@ -1,0 +1,89 @@
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.main:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-box-shadow: 0 0 1.5em 0.25em var(--primary);
+    -moz-box-shadow: 0 0 1.5em 0.25em var(--primary);
+    box-shadow: 0 0 1.5em 0.25em var(--primary);
+}
+.main-text{
+    color: var(--text-alt);
+    padding: 2.5rem;
+}
+.wall{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    background: black;
+    background-blend-mode: screen;
+}
+.summary{
+    width: 90%;
+    max-width: 950px;
+    height: 24rem;
+    padding: 1.5rem 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+#firefly{
+    width: 100vw;
+    height: 100vh;
+    line-height: 0.1px;
+    outline: none;
+}
+
+/*----------Responsive-------------*/
+@media screen and (min-width:600px) {
+    .main-text{
+      font-size: 2em;
+    }
+    .summary span:hover{
+      color: var(--secondary);
+      text-shadow: 1px 1px 5px var(--secondary), -1px -1px 5px var(--secondary);
+      transition: 100ms ease;
+    }
+    .summary span:active{
+        pointer-events: none;
+    }
+}
+@media screen and (min-width:700px) {
+    .main-text{
+        font-size: 2.25em;
+    }
+}
+@media screen and (min-width:800px) {
+    .main-text{
+        font-size: 2.5em;
+    }
+}
+@media screen and (min-width:900px) {
+    .main-text{
+        font-size: 2.75em;
+    }
+}
+@media screen and (min-width:1000px) {
+    .main-text{
+        font-size: 3.25em;
+    }
+}
+@media screen and (min-width:1200px) {
+    .main-text{
+        font-size: 3.5em;
+    }
+}

@@ -4,10 +4,10 @@
 .skill-sec-title, .edu-h1{
     color: var(--text-alt);
     padding: 2.5rem 0;
-    letter-spacing: 0.075em;
+    letter-spacing: 0.01em;
 }
 .edu-h1{
-    margin: 1.5em auto;
+    margin-top: 1.5em;
 }
 .dtls{
     width: 100%;
@@ -38,9 +38,12 @@
 .skill, .edu{
     font-size: 16px;
     line-height: 25px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.01em;
     padding: 2rem 0 1rem 0;
     color: var(--text-alt);
+}
+.edu{
+    padding: 0;
 }
 @media screen and (min-width:750px) {
     .skill-sec-title{

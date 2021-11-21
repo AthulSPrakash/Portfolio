@@ -9,16 +9,15 @@ import './styles/App.css'
 import { useState } from 'react'
 
 function App() {
-  const [page, setPage] = useState()
-
-  function pageCheck(value){
-    setPage(value)
+  const [check, setCheck] = useState(false)
+  function changePage(e){
+    setCheck(prevState => !prevState)
+    e.target.textContent = check ? 'about' : 'home'    
   }
-
   return (
     <>
-      <Nav about={pageCheck}/>
-      {!page ?
+      <Nav about={(e)=>changePage(e)}/>
+      {!check ?
         <> 
           <Main/>
           <Project/>

@@ -1,4 +1,5 @@
-import ProjectData from './data/projectData'
+import ProjectData from './data/projectData.json'
+import Summary from './data/summaryData.json'
 import { useState,useEffect } from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel'
@@ -124,10 +125,7 @@ export default function Project(){
                 </div>
             </div>
             <div className="quote">
-                <p className="text">A good design 
-                    should be elegant both inside & 
-                    outside while being accessible to all.
-                </p>
+                <blockquote className="text">{Summary.quote}</blockquote>
             </div>
             <div id="overlay">
                 {overlays}

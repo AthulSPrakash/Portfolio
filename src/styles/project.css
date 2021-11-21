@@ -50,14 +50,18 @@
     width: 100vw;
     height: 100vh;
     z-index: 3;
+    opacity: 0;
     visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(3px);
+    transition: 0.2s linear;
 }
 .visible{
     visibility: visible;
+    opacity: 100;
+    transition: 0.2s linear;
 }
 .overly-wrapper{
     height: 100%;
@@ -234,7 +238,6 @@
     }
     .swiper-container{
         transform-style: preserve-3d;
-        transform: rotateY(-45deg) translateX(-150px);
     }    
 }
 @media screen and (max-width:880px) {
@@ -417,64 +420,50 @@
     }
     .swiper-container{
         display: grid;
-        grid-template-areas: 
-        'a b c d e'
-        'a f c g e'
-        ;
         place-items: center;
         margin: 2.5em 0;
-        gap: 1em;
+        grid-gap: 3em 2em;
+        grid-template-columns: repeat(2,1fr); 
+        padding: 0 2.5em;
     }
     .swiper-slide{
-        width: 200px;
+        width: 100%;
         height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: rotateZ(45deg);
-        border-radius: 30% 0;
-        margin: 1em 0;
         background: var(--text);
         overflow: hidden;
     }
-    .swiper-slide:nth-child(1){
-        grid-area: a;
-    }
-    .swiper-slide:nth-child(2){
-        grid-area: b;
-    }
-    .swiper-slide:nth-child(3){
-        grid-area: f;
-    }
-    .swiper-slide:nth-child(4){
-        grid-area: c;
-    }
-    .swiper-slide:nth-child(5){
-        grid-area: d;
-    }
-    .swiper-slide:nth-child(6){
-        grid-area: g;
-    }
-    .swiper-slide:nth-child(7){
-        grid-area: e;
-    }
     .swiper-slide img{
-        transform: rotateZ(-45deg);
-        width: 100%;
-        height: 100%;
+        width: auto;
+        height: 80%;
     }
     .swiper-slide:hover{
         box-shadow: 0 0 20px 5px var(--secondary);
-        outline: 2px solid var(--secondary);
+        outline: 1px solid var(--secondary);
       } 
 }
 @media screen and (min-width:600px) {
     .sec-one-title{
-        font-size: 1.8em;
+        font-size: 2em;
     }
 }
-@media screen and (min-width:750px) {
+@media screen and (min-width:800px) {
     .sec-one-title{
-        font-size: 2em;
+        font-size: 2.25em;
+    }
+    .swiper-container{
+        grid-template-columns: repeat(3,1fr); 
+    }
+}
+@media screen and (min-width:1000px) {
+    .sec-one-title{
+      font-size: 2.5em;
+    }
+}
+@media screen and (min-width:1200px) {
+    .sec-one-title{
+        font-size: 2.75em;
     }
 }
