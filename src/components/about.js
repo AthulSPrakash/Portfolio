@@ -6,7 +6,10 @@ export default function About(){
     return(
         <main className="about-main">
             <img className="about-bg" src={Images.path[0]} alt="about background"/>
-            <h2 className="about-desc">{AboutData.about}</h2>
+            <h1 className="about-desc">
+                <span className="about-desc-title">My name is Athul S Prakash.</span><br/>
+                {AboutData.about}
+            </h1>
         </main>
     )
 }

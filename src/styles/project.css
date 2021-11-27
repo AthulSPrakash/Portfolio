@@ -12,7 +12,7 @@
 .sec-one-title{
     text-align: center;
     color: var(--text-alt);
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     margin-top: 1em;
 }
 .sec-one-title:nth-of-type(1)::first-letter{color: var(--secondary);}
@@ -33,9 +33,10 @@
 }
 .swiper-slide, .swiper-slide img{
     width: 80%;
-    height: auto;
+    height: 300px;
     border-radius: 3px;
     cursor: pointer;
+    background: var(--project);
 }
 .swiper-slide img{
     transition: 200ms linear;
@@ -55,8 +56,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(3px);
+    background: rgba(0,0,0,0.5);
     transition: 0.2s linear;
+}
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+    .overlay-container{
+        background: transparent;
+        -webkit-backdrop-filter: blur(3px);
+        backdrop-filter: blur(3px);
+    }
 }
 .visible{
     visibility: visible;
@@ -113,40 +121,33 @@
     height: auto;
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .app-img-container{
     position: relative;
-    width: 50%;
-    height: 100%;
     flex-grow: 1;
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.app-img-container img{
-    position: absolute;
-    height: 100%;
-    border: 7px solid var(--black);
-    border-radius: 1em;
+.app-image{
+    width: auto !important;
+    height: 200px !important;
+    border: 3px solid var(--black) !important;
     z-index: 2;
 }
-.app-details{
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    flex-grow: 1;
-    display: grid;
-    grid-template-areas: 
-        'x x x'
-        'a a a'
-        'b b b'
-        'e e e';
-    padding: 2em;
-    background: var(--text-alt);
-    top: 0;
-    right: 0;
+.dot {
+    background-color: var(--text-ter) !important;
 }
-.app-details li{
-    padding: 5px 0;
-    font-weight: 600;
+.control-arrow{
+    background: transparent !important;
+}
+.control-prev.control-arrow::before{
+    border-right: 8px solid var(--text-ter) !important;
+}
+.control-next.control-arrow::before{
+    border-left: 8px solid var(--text-ter) !important;
 }
 .app-name{
     grid-area: x;
@@ -155,45 +156,40 @@
     align-items: center;
 }
 .app-name p{
-    margin: 0.5em 0 0.25em 0;
+    margin: 0 0 0.25em 0;
     font-size: 2em;
     font-weight: 600;
 }
 .app-summary{
     grid-area: a;
+    padding: 1em;
+    margin-bottom: 1em;
+    background: rgba(0,0,0,0.1);
 }
-.app-feat-wrapper{
-    grid-area: b;
-    display: flex;
-    gap: 2em;
-    color: var(--text-ter);
-    margin-left: 1em;
-}
-.app-feat1, .app-feat2{
-    display: flex;
-    flex-direction: column;
-}
-.app-icon{
+.btn-container{
     position: relative;
     grid-area: e;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-.app-icon button{
+.btn-container button{
     height: 100%;
     border: none;
-    background: none;
+    background: none;   
+}
+.code-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     font-size: 2em;
+    color: var(--black);
+}
+.app-btn{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-}
-.app-icon img{
-    width: 65px;
-    height: 65px;
-    border-radius: 100px;
-    outline: 3px solid var(--text);
+    font-size: 2em;
 }
 #overlay{
     position: absolute;
@@ -201,6 +197,7 @@
     height: 100vh;
 }
 .carousel-root{
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -210,54 +207,17 @@
     align-items: center;
     display: flex;
 }
-.quote{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background: var(--primary);
-    margin: 3em 0;
-}
-.text{
-    font-size: 1.5em;
-    font-weight: 600;
-    padding: 3em 2.5rem;
-    text-align: center;
-    color: var(--text-alt);
-    letter-spacing: 0.1rem;
-    opacity: 0;
-    transition: 1s;
-}
-.text:nth-of-type(1)::first-letter{color: var(--secondary);}
-.text.appear{
-    opacity: 1;
-    transition: 1s;
-}
-@media screen and (max-width: 1150px) {
-    .slide{
-        perspective: 50em;
-    }
-    .swiper-container{
-        transform-style: preserve-3d;
-    }    
-}
 @media screen and (max-width:880px) {
-    .overlay{
-        height: 75vh;
-    }
     .app-details{
         width: 55%;
     }
     .app-name p{
         font-size: 1.9em;
     }
-    .app-icon img{
-        width: 55px;
-        height: 55px;
-    }
 }
-@media screen and (max-width:750px) {
+@media screen and (max-width:755px) {
     .overlay{
-        height: 70vh;
+        height: 80vh;
     }
     .app-details{
         width: 52%;
@@ -265,77 +225,41 @@
     .app-name p{
         font-size: 1.7em;
     }
-    .app-icon img{
-        width: 50px;
-        height: 50px;
-    }
-    .app-details li{
-        font-size: 0.85em;
-    }
 }
 @media screen and (max-width:685px) {
-    .overlay{
-        height: 60vh;
-    }
     .app-name p{
         font-size: 1.5em;
     }
     .app-summary{
         font-size: 0.85em;
     }
-    .app-icon img{
-        width: 45px;
-        height: 45px;
-    }
-    .app-details li{
-        font-size: 0.75em;
-    }
 }
 @media screen and (max-width:650px) {
-    .app-details li{
-        font-size: 0.65em;
-    }
     .app-summary{
         font-size: 0.70em;
     }
-    .app-icon img{
-        width: 40px;
-        height: 40px;
-    }
-    .app-feat-wrapper{
-        gap: 1em;
+    .app-image{
+        height: 180px !important;
     }
 }
 @media screen and (max-width:550px) {
-    .overlay{
-        height: 55vh;
-    }
    .app-name p{
        font-size: 1.3em;
-   }
-    .app-details li{
-        font-size: 0.5em;
     }
     .close-overlay{
         font-size: 1.35em;
     }
-    .app-icon button{
+    .btn-container button{
         font-size: 1.5em;
-    }
-    .app-icon img{
-        width: 37px;
-        height: 37px;
     }
 }
 @media screen and (max-width:530px) {
-    .slide{
-        perspective: unset;
-    }
     .swiper-container{
         transform-style: unset;
         transform: unset;
     }
     .overlay{
+        max-height: unset;
         width: 80vw;
         height: 70vh;
     }
@@ -357,18 +281,10 @@
         position: absolute;
         top: unset;
         justify-content: center;
-
     }
-    .app-img-container img{
+    .app-image{
         z-index: unset;
         height: 80%;
-    }
-    .app-icon img{
-        display: none;
-    }
-    .app-icon button{
-        position: absolute;
-        right: 0;
     }
     .app-name{
         margin-bottom: 1em;
@@ -376,32 +292,22 @@
     .app-summary{
         font-size: 0.8em;
     }
-    .app-feat-wrapper{
-        display: none;
+    .btn-container{
+        margin: 1em 0;
     }
 }
-@media screen and (max-width:385px) {
-    .overlay{
-        height: 65vh;
-    }
-    .app-img-container img {
+@media screen and (max-width:390px) {
+    .app-image{
         height: 70%;
     }
     .app-summary{
         font-size: 0.75em;
-    }
-    .app-icon img{
-        width: 45px;
-        height: 45px;
     }
     .app-name{
         font-size: 0.9em;
     }
 }
 @media screen and (max-width:345px) {
-    .overlay{
-        height: 60vh;
-    }
     .app-name{
         font-size: 0.7em;
     }
@@ -422,7 +328,7 @@
         display: grid;
         place-items: center;
         margin: 2.5em 0;
-        grid-gap: 3em 2em;
+        grid-gap: 3em;
         grid-template-columns: repeat(2,1fr); 
         padding: 0 2.5em;
     }
@@ -432,7 +338,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: var(--text);
         overflow: hidden;
     }
     .swiper-slide img{
@@ -466,4 +371,23 @@
     .sec-one-title{
         font-size: 2.75em;
     }
+}
+@media screen and (min-width:1350px) {
+    .swiper-container{
+        height: 70vh;
+    }
+    .swiper-slide{
+        height: 80%;
+    }
+}
+@media screen and (min-width:1600px) {
+    .swiper-container{
+        height: 70vh;
+    }
+    .swiper-slide{
+        height: 90%;
+    }
+}
+@media screen and (max-height: 620px) {
+    
 }

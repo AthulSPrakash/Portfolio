@@ -1,9 +1,9 @@
 {
     "name": "Hi, My name is Athul. ",
     "short_summary": "I'm a Full Stack Web Developer & I love Designing things.",
-    "about": "My name is Athul S Prakash, I'm a full-stack web developer and UI/UX designer. I'm also familiar with Android development in Kotlin. I started learning to program because I love building cool apps. I love drawing and because of that I always loved cool designs, I consider development as an art and I always create my works based on that.",
-    "fEnd": ["Front-End","HTML","CSS", "Sass","JavaScript", "ES6+","React","Bootstrap","Figma"],
-    "bEnd": ["Back-End","NodeJS","ExpressJS","SQL","RestAPI","MySQL","MongoDB"],
-    "misc": ["MISC","Android Development","Kotlin","Android Studio","GIT","Adobe Photoshop","Adobe Illustrator"],
-    "quote": "We are what we repeatedly do. Excellence then, is not an act, but a habit."
+    "about": "I'm a full-stack web developer and UI/UX designer. I'm also familiar with Android development in Kotlin. I started learning to program because I love building cool apps. Drawing and video games are my hobbies, I consider development as an art and I always create my works based on that.",
+    "fEnd": ["HTML","CSS", "Sass","JavaScript", "ES6+","React","Bootstrap","ThreeJs"],
+    "bEnd": ["NodeJS","ExpressJS","RestAPI","SQL","MySQL","MongoDB"],
+    "misc": ["Kotlin","Android Studio","Python","TensorFlow","BrainJs","GIT","Photoshop","Drawing"],
+    "quote": "Here is a cool 3D model using JavaScript."
 }

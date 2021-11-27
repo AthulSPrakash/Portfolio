@@ -55,7 +55,8 @@
     }
     .summary span:hover{
       color: var(--secondary);
-      text-shadow: 1px 1px 5px var(--secondary), -1px -1px 5px var(--secondary);
+      text-shadow: 1px 1px 4px var(--secondary), -1px -1px 4px var(--secondary);
+      transform: rotateZ(45deg);
       transition: 100ms ease;
     }
     .summary span:active{

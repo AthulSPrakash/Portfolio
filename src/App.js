@@ -9,14 +9,17 @@ import './styles/App.css'
 import { useState } from 'react'
 
 function App() {
+
   const [check, setCheck] = useState(false)
+  
   function changePage(e){
     setCheck(prevState => !prevState)
     e.target.textContent = check ? 'about' : 'home'    
   }
+
   return (
     <>
-      <Nav about={(e)=>changePage(e)}/>
+      <Nav about={changePage}/>
       {!check ?
         <> 
           <Main/>
@@ -29,7 +32,7 @@ function App() {
           <Skill/>
         </>
         }
-      <Footer/>
+      <Footer page={check}/>
     </>
   )
 }

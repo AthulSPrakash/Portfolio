@@ -1,7 +1,7 @@
 import Contact from './data/contactData.json'
 import '../styles/footer.css'
 
-export default function Footer(){
+export default function Footer({page}){
     const links = Contact.map(link=>{
         return(
             <li className="hover-circle" key={link.id}>
@@ -26,6 +26,7 @@ export default function Footer(){
                     {links}
                 </ul>
             </div>
+            { !page && <a className="attribute" href="https://www.freepik.com/vectors/star" title="Star vector created by vectorpouch">Wallpaper from freepik.com</a> }
             <div className="license" aria-label="license details">
                 <p>
                     This work is licensed under 

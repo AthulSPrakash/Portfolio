@@ -17,7 +17,7 @@ html{scroll-behavior: smooth;}
   background: var(--text);
   border: 3px solid var(--scrollbar);
 }
-h1,h2,h3,h4,p,a,li,blockquote{
+h1,h2,h3,h4,p,a,li{
   font-family: 'Roboto', sans-serif;
 }
 h3{

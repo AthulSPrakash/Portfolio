@@ -35,20 +35,14 @@ export default function Skill(){
 
     return(
         <section className="skills">
-            <h3 className="skill-sec-title">SKILLS</h3>
-            <div id="fend" className="dtls">
-                
-            </div>
-            <div id="bend" className="dtls">
-            
-            </div>
-            <div id="misc" className="dtls">
-               
-            </div>
+            <h2 className="skill-sec-title">SKILLS</h2>
+            <h3 className="skill-section">WEB DEVELOPMENT</h3>
+            <div id="fend" className="dtls"></div>
+            <div id="bend" className="dtls"></div>
+            <h3 className="skill-section">MISC</h3>
+            <div id="misc" className="dtls"></div>
             <h3 className="edu-h1">EDUCATION</h3>
-            <div className="dtls">
-                <p className="edu">Bachelor of Technology - Information Technology</p>
-            </div>
+            <p className="edu">Bachelor of Technology - Information Technology</p>
         </section>
     )
 }
