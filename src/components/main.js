@@ -20,7 +20,7 @@ export default function Main(){
 
     return(
         <main className="main">
-            <img className="wall" src={Images.path} alt="background" />
+            <img className="wall" src={Images.path[0]} alt="background" />
             <div className="summary">
                 <h1 className="main-text" id="hover-text" aria-label="summary">
                 </h1>

@@ -6,6 +6,17 @@ import '../styles/project.css'
 
 export default function Project(){
 
+    const [width, setWidth] = useState(0)
+
+    useEffect(()=>windowSize())
+
+    window.onresize = windowSize
+
+    function windowSize(){
+        const width = window.innerWidth
+        setWidth(width)
+    }
+
     const overlays = ProjectData.map(overlay=>{
 
         const index = overlay.id
@@ -26,6 +37,7 @@ export default function Project(){
                                         </button>
                                     </div>
                                     <div className="app-img-container">
+                                    { width >= 530 ?
                                         <Carousel
                                             showThumbs={false}
                                             showStatus={false}
@@ -35,6 +47,9 @@ export default function Project(){
                                         >{overlay.image.map(img=>{
                                             return(<img key={overlay.image.indexOf(img)} className="app-image" src={img} alt="App's mobile screenshot"/>)
                                         })}</Carousel>
+                                    :
+                                        <img className="mobile-view" src={overlay.image[1]} alt="App's mobile screenshot"/>
+                                    }
                                     </div>
                                     <div className="app-summary">
                                         <p>{overlay.summary}</p>
@@ -63,6 +78,7 @@ export default function Project(){
         return(
             <div key={project.id} className="swiper-slide" onClick={()=>openOverlay(index)}>
                 <img src={project.preview} alt={project.name}/>
+                <h3 className="project-name">{project.name}</h3>
             </div>
         )
     })
@@ -79,17 +95,6 @@ export default function Project(){
     }
     function gotoCode(i){
         window.open(`${ProjectData[i].code}`,"_blank")
-    }
-
-    const [width, setWidth] = useState(0)
-
-    useEffect(()=>windowSize())
-
-    window.onresize = windowSize
-
-    function windowSize(){
-        const width = window.innerWidth
-        setWidth(width)
     }
 
 

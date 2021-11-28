@@ -1,7 +1,7 @@
 {
     "name": "Hi, My name is Athul. ",
     "short_summary": "I'm a Full Stack Web Developer & I love Designing things.",
-    "about": "I'm a full-stack web developer and UI/UX designer. I'm also familiar with Android development in Kotlin. I started learning to program because I love building cool apps. Drawing and video games are my hobbies, I consider development as an art and I always create my works based on that.",
+    "about": "I'm a full-stack web developer and UI/UX designer. I'm also familiar with Android development in Kotlin. I love building cool apps, drawing and playing video games. I treat development as an art and I always create my works based on that.",
     "fEnd": ["HTML","CSS", "Sass","JavaScript", "ES6+","React","Bootstrap","ThreeJs"],
     "bEnd": ["NodeJS","ExpressJS","RestAPI","SQL","MySQL","MongoDB"],
     "misc": ["Kotlin","Android Studio","Python","TensorFlow","BrainJs","GIT","Photoshop","Drawing"],

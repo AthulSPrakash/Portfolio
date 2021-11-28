@@ -32,7 +32,7 @@ function App() {
           <Skill/>
         </>
         }
-      <Footer page={check}/>
+      <Footer/>
     </>
   )
 }

@@ -14,7 +14,7 @@
     },
     {
         "id": 1,
-        "name": "Whack The mole",
+        "name": "Video Game",
         "summary": "Smack the mole before timer runs out, player can choose difficulty level ( easy, normal, hard ).",
         "image":  [
             "images/game/pc.png",
@@ -22,7 +22,7 @@
             "images/game/tab.png"
         ],
         "preview": "images/game/preview.png",
-        "url": "https://smack-the-mole.netlify.app",
+        "url": "https://codepen.io/athulsprakash/pen/xxLLZLe",
         "code": "https://github.com/AthulSPrakash/"
     },
     {
