@@ -256,6 +256,9 @@
     }
 }
 @media screen and (max-width:530px) {
+    .work{
+        height: 100vh;
+    }
     .swiper-container{
         transform-style: unset;
         transform: unset;

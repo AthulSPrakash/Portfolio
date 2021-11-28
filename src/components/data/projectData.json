@@ -4,9 +4,9 @@
         "name": "To-Do:Note",
         "summary": "Write notes and To-do list. Also to give user the feeling of sticky notes they are true to their colors and randomise on each notes.",
         "image": [
-            "images/todo/pc.png",
-            "images/todo/mobile.png",
-            "images/todo/tab.png"
+            "images/todo/pc.jpg",
+            "images/todo/mobile.jpg",
+            "images/todo/tab.jpg"
         ],
         "preview": "images/todo/preview.png",
         "url": "https://todo-athul.netlify.app",
@@ -17,9 +17,9 @@
         "name": "Video Game",
         "summary": "Smack the mole before timer runs out, player can choose difficulty level ( easy, normal, hard ).",
         "image":  [
-            "images/game/pc.png",
-            "images/game/mobile.png",
-            "images/game/tab.png"
+            "images/game/pc.jpg",
+            "images/game/mobile.jpg",
+            "images/game/tab.jpg"
         ],
         "preview": "images/game/preview.png",
         "url": "https://codepen.io/athulsprakash/pen/xxLLZLe",
@@ -30,9 +30,9 @@
         "name": "Tech News API",
         "summary": "Web scraper API using NodeJs and cheerio, collect tech related news from top 12 websites in the world.",
         "image": [
-            "images/api/pc.png",
-            "images/api/mobile.png",
-            "images/api/tab.png"
+            "images/api/pc.jpg",
+            "images/api/mobile.jpg",
+            "images/api/tab.jpg"
         ],
         "preview": "images/api/preview.png",
         "url": "https://quicktechnews.netlify.app",
@@ -43,9 +43,9 @@
         "name": "Weather",
         "summary": "Search the location and get weather detailes. With changing background according to the weather data",
         "image": [
-            "images/weather/pc.png",
-            "images/weather/mobile.png",
-            "images/weather/tab.png"
+            "images/weather/pc.jpg",
+            "images/weather/mobile.jpg",
+            "images/weather/tab.jpg"
         ],
         "preview": "images/weather/preview.png",
         "url":  "https://weather-app-athul.netlify.app",
@@ -56,9 +56,9 @@
         "name": "Video Chat",
         "summary": "One to one video chat app using webRTC, React, NodeJS and Socket.io. just type in your name and share the link.",
         "image": [
-            "images/vchat/pc.png",
-            "images/vchat/mobile.png",
-            "images/vchat/tab.png"
+            "images/vchat/pc.jpg",
+            "images/vchat/mobile.jpg",
+            "images/vchat/tab.jpg"
         ],
         "preview": "images/vchat/preview.png",
         "url": "https://video-chat-athul.netlify.app",
@@ -69,9 +69,9 @@
         "name": "Recipe",
         "summary": "Recipes with link to Youtube for cooking tutorial. Just search for the food or item you want and get great recipes to make your day.",
         "image": [
-            "images/recipe/pc.png",
-            "images/recipe/mobile.png",
-            "images/recipe/tab.png"
+            "images/recipe/pc.jpg",
+            "images/recipe/mobile.jpg",
+            "images/recipe/tab.jpg"
         ],
         "preview": "images/recipe/preview.png",
         "url": "https://recipe-app-athul.netlify.app",
