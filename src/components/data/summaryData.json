@@ -4,6 +4,6 @@
     "about": "I'm a full-stack web developer and UI/UX designer. I'm also familiar with Android development in Kotlin. I love building cool apps, drawing and playing video games. I treat development as an art and I always create my works based on that.",
     "fEnd": ["HTML","CSS", "Sass","JavaScript", "ES6+","React","Bootstrap","ThreeJs"],
     "bEnd": ["NodeJS","ExpressJS","RestAPI","SQL","MySQL","MongoDB"],
-    "misc": ["Kotlin","IntelliJ","Python","TensorFlow","BrainJs","GIT","Photoshop","Drawing"],
+    "misc": ["Kotlin","IntelliJ","BrainJs","GIT","Photoshop","Drawing"],
     "quote": "Here is a cool 3D model using JavaScript."
 }
