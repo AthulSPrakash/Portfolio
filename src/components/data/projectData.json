@@ -28,7 +28,7 @@
     {
         "id": 2,
         "name": "Tech News API",
-        "summary": "Web scraper API using NodeJs and cheerio, collect tech related news from top 12 websites in the world.",
+        "summary": "Web scraper API using Node.js and cheerio, collect tech related news from top 12 websites in the world.",
         "image": [
             "images/api/pc.jpg",
             "images/api/mobile.jpg",
@@ -54,7 +54,7 @@
     {
         "id": 4,
         "name": "Video Chat",
-        "summary": "One to one video chat app using webRTC, React, NodeJS and Socket.io. just type in your name and share the link.",
+        "summary": "One to one video chat app using webRTC, React, Node.js and Socket.io. just type in your name and share the link.",
         "image": [
             "images/vchat/pc.jpg",
             "images/vchat/mobile.jpg",
