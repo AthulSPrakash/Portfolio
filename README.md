@@ -1,3 +1,2 @@
-Portfolio
-
-https://athulsprakash.netlify.app/
+# Portfolio
+Made using React.js.
